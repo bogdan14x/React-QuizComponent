@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import QuizQuestion from './QuizQuestion';
 import { quiz_questions } from './quiz_data.json';
 
 class Quiz extends Component {
@@ -13,7 +13,7 @@ class Quiz extends Component {
     render() {
         return(
             <div className="quiz_question">
-                { quiz_questions[0].instruction_text }
+                <QuizQuestion quiz_question = {quiz_questions[this.state.quiz_position - 1]} />
             </div>
         )
     }
